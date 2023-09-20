@@ -9,14 +9,41 @@ public:
 	CSecuDocUtil() = default;
 	~CSecuDocUtil() = default;
 	
+	/*!
+	* \brief 
+	* \details 
+	* \param[in,out] lpSrcFileName
+	* \param[in,out] lpDstFileName
+	* \param[in,out] nDstFileName
+	* \return int 
+	*/
 	int DecryptTempFile(LPCWSTR lpSrcFileName, LPWSTR lpDstFileName, DWORD nDstFileName);
-	int SetNormalDocFile(LPCWSTR lpFilePath, int nFilePath);
-	int GetDocType(LPCWSTR lpFilePath, int nFilePath);
-	int GetSecuDocAcl(LPCWSTR lpFilePath, IN DSCSSDK_ACL eCheckRight, OUT bool *bAuth);
 
-private:
-	int ConvertToSDSManACL(DSCSSDK_ACL eRight);
-	//EDCommon* edcommon = nullptr;
-//	int GetDSLoginStatus();
-//	HWND GetSDSManWindowHandle();
+	/*!
+	* \brief 
+	* \details 
+	* \param[in,out] lpFilePath
+	* \param[in,out] nFilePath
+	* \return int 
+	*/
+	int SetNormalDocFile(LPCWSTR lpFilePath, int nFilePath);
+
+	/*!
+	* \brief 
+	* \details 
+	* \param[in,out] lpFilePath
+	* \param[in,out] nFilePath
+	* \return int 
+	*/
+	int GetDocType(LPCWSTR lpFilePath, int nFilePath);
+
+	/*!
+	* \brief 
+	* \details 
+	* \param[in,out] lpFilePath
+	* \param[in,out] eCheckRight
+	* \param[in,out] bAuth
+	* \return int 
+	*/
+	int GetSecuDocAcl(LPCWSTR lpFilePath, IN DSCSSDK_ACL eCheckRight, OUT bool *bAuth);
 };

@@ -104,7 +104,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeaderFile>framework.h; stdafx.h;</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>../../../Common\Include;../../DSCommon\Include;../../HookModule\DSEDCommon;../../../../SWork\SecureArea\Common\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../Common\Include;../../DSCommon\Include;../../HookModule\DSEDCommon;../../../../SWork\SecureArea\Common\Include;../../../SCSDK/SCSDKCommon/Include</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
@@ -114,7 +114,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>
       </IgnoreSpecificDefaultLibraries>
-      <AdditionalDependencies>DSEDCommon.lib;SXTracer.lib;SCPPipeMngr.lib;DSResourceCtrl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>DSEDCommon.lib;SXTracer.lib;SCPPipeMngr.lib;DSResourceCtrl.lib;SCSDKDataMD.lib;DSInfo.lib;SCUser.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>../../HookModule\DSEDCommonLib;../../\DSCommon\Lib\Release;../../../Common\Lib2019;../../../Common\Lib;%(AdditionalDependencies)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

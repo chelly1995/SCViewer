@@ -12,8 +12,29 @@ public:
 	~CSHMFileInfo() = default;
 
 public:
+	/*!
+	* \brief 
+	* \details 
+	* \param[in,out] pTempFileName
+	* \return int 
+	*/
 	int CreateSHMSCView(wchar_t* pTempFileName);
+
+	/*!
+	* \brief 
+	* \details 
+	* \param[in,out] pOriFileName
+	* \return int 
+	*/
 	int WriteSHMSCView(wchar_t* pOriFileName);
+	
+	/*!
+	* \brief 
+	* \details 
+	* \param[in,out] pKey
+	* \param[in,out] pValue
+	* \return int 
+	*/
 	int ReadSHMSCView(wchar_t* pKey, wchar_t* pValue);
 
 private:
